@@ -1,0 +1,79 @@
+h1 img {
+  height: 40px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+a {
+  color: #08F;
+}
+
+footer {
+  color: #888;
+  font-size: 12px;
+  margin: 12px;
+  text-align: center;
+}
+
+table {
+  display: inline-block;
+}
+
+td {
+  padding: 0 5px;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.grey-bar {
+  background-color: hsl(0, 0%, 90%);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.grey-bar p {
+  margin: 0;
+  padding: 3px;
+  text-align: right;
+}
+
+.grey-bar input {
+  height: 26px;
+}
+
+.book-cell {
+  text-align: center;
+}
+
+.book-cell img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.book-cell p {
+  margin: 0;
+}
+
+.book-cell .author {
+  font-size: 12px;
+}
+
+.book-row {
+  padding-bottom: 10px;
+}
+
+.search-result {
+  margin: 10px -15px;
+}
+
+.search-result img {
+  height: 128px;
+}
+
+.search-result p {
+  margin: 0;
+}
