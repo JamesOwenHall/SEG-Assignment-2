@@ -4,189 +4,212 @@
     <title>Checkout</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bookstore.css">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1><img src="img/logo blue.png"></h1>
-      </header>
-      <div class="row grey-bar">
-        <div class="col-sm-offset-6 col-sm-2">
-          <p>
-            <a href="#">Cart</a>
-          </p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Book Store</a>
         </div>
-        <div class="col-sm-4">
-          <input type="search" class="form-control" placeholder="Search">
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="cart.html">Cart</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+                aria-expanded="false">Categories <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="history.html">Fiction</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="history.html">Politics</a></li>
+                <li><a href="history.html">Romance</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form id="search" class="navbar-form navbar-right" role="search" action="search.html">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
         </div>
       </div>
+    </nav>
 
+    <!-- Content -->
+    <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <h2>Checkout</h2>
+          <form name="checkout-form">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Personal Information</h3>
+              </div>
+              <div class="panel-body">
+                <form data-toggle="validator">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>First name</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Last name</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <label>Email address</label>
+                        <input name="email" type="email" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Personal Information</h3>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Delivery Information</h3>
+              </div>
+              <div class="panel-body">
+                <form data-toggle="validator">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <div class="form-group">
+                        <label>Street number</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-8">
+                      <div class="form-group">
+                        <label>Street name</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-group">
+                        <label>Apt number</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>City</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>Province</label>
+                        <select class="form-control">
+                          <option>Alberta</option>
+                          <option>British Columbia</option>
+                          <option>Manitoba</option>
+                          <option>New Brunswick</option>
+                          <option>Newfoundland and Labrador</option>
+                          <option>Northwest Territories</option>
+                          <option>Nova Scotia</option>
+                          <option>Nunavut</option>
+                          <option>Ontario</option>
+                          <option>Prince Edward Island</option>
+                          <option>Quebec</option>
+                          <option>Saskatchewan</option>
+                          <option>Yukon</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-group">
+                        <label>Postal code</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="panel-body">
-              <form data-toggle="validator">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <label>First name</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <label>Last name</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="form-group">
-                      <label>Email address</label>
-                      <input type="email" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Delivery Information</h3>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Payment Information</h3>
+              </div>
+              <div class="panel-body">
+                <form data-toggle="validator">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Cardholder's name</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>Card number</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-group">
+                        <label>Expiry date</label>
+                        <input type="text" class="form-control" placeholder="MM/YY" pattern="^\d\d/\d\d$" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <div class="form-group">
+                        <label>CCV code</label>
+                        <input type="text" class="form-control" required>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="panel-body">
-              <form data-toggle="validator">
-                <div class="row">
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label>Street number</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="form-group">
-                      <label>Street name</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label>Apt number</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label>City</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label>Province</label>
-                      <select class="form-control">
-                        <option>Alberta</option>
-                        <option>British Columbia</option>
-                        <option>Manitoba</option>
-                        <option>New Brunswick</option>
-                        <option>Newfoundland and Labrador</option>
-                        <option>Northwest Territories</option>
-                        <option>Nova Scotia</option>
-                        <option>Nunavut</option>
-                        <option>Ontario</option>
-                        <option>Prince Edward Island</option>
-                        <option>Quebec</option>
-                        <option>Saskatchewan</option>
-                        <option>Yukon</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="form-group">
-                      <label>Country</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label>Postal code</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Payment Information</h3>
-            </div>
-            <div class="panel-body">
-              <form data-toggle="validator">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <label>Cardholder's name</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <label>Card number</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label>Expiry date</label>
-                      <input type="text" class="form-control" placeholder="MM/YY" pattern="^\d\d/\d\d$" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="form-group">
-                      <label>CCV code</label>
-                      <input type="text" class="form-control" required>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <hr>
-          <h4 class="text-right">Subtotal: $11.99</h4>
-          <h4 class="text-right">Tax: $1.80</h4>
-          <h4 class="text-right">Total: $13.79</h4>
-          <p class="text-right">
-            <button class="btn btn-default">Back</button>
-            <button class="btn btn-primary">Checkout</button>
-          </p>
+            <hr>
+            <h4 class="text-right">Subtotal: $11.99</h4>
+            <h4 class="text-right">Tax: $1.80</h4>
+            <h4 class="text-right">Total: $13.79</h4>
+            <p class="text-right">
+              <a class="btn btn-default" href="cart.html">Back</a>
+              <a class="btn btn-primary" href="success.html">Checkout</a>
+            </p>
+          </form>
 
         </div>
       </div>
-
-      <footer>&copy; Book Store 2015.</footer>
     </div>
+    <footer class="footer">
+      <p>&copy; Book Store 2015.</p>
+    </footer>
 
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/validator.min.js"></script>
+    <!-- Load JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/validator.min.js"></script>
   </body>
 </html>
