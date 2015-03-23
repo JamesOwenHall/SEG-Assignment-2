@@ -4,6 +4,8 @@
     <title>Search Results</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bookstore.css">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
   </head>
   <body>
     <!-- Navbar -->
@@ -39,7 +41,16 @@
     <!-- Content -->
     <div class="container">
       <div class="row">
-        <h2>Search Results</h2>
+        <h2 class="search-header">Search results for: American</h2>
+        <div class="search-sort">
+          <label for="search-filter">Sort By: </label>
+          <select>
+            <option>Relevance</option>
+            <option>Price High-to-Low</option>
+            <option>Price Low-to-High</option>
+            <option>Popularity</option>
+          </select>
+        </div>
 
         <div class="row search-result">
           <div class="col-sm-2">
@@ -121,8 +132,10 @@
           </ul>
         </nav>
       </div>
-      <footer>&copy; Book Store 2015.</footer>
     </div>
+    <footer class="footer">
+      <p>&copy; Book Store 2015.</p>
+    </footer>
     
     <!-- Load JS -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
